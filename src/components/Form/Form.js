@@ -11,17 +11,6 @@ const Form = (props) => {
   const [valueImage, setValueImage] = useState('');
   const [valueTeam, setValueTeam] = useState('');
 
-  const teams =[
-    'selecione um time',
-    'Programação',
-    'Front End',
-    'Data Science',
-    'Devops',
-    'UX e Design',
-    'Mobile',
-    'Inovação e Gestão'
-  ];
-
   const onSave = (evento) => {
     evento.preventDefault();
     // console.log("Form submetido", valueName, valueJob, valueImage, valueTeam);
@@ -60,7 +49,7 @@ const Form = (props) => {
         <Dropdown
           obrigatorio={true}
           label="Time"
-          itens={teams}
+          itens={props.teamList}
           value={valueTeam}
           onChange={value => setValueTeam(value)}
         />

@@ -48,13 +48,16 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form  onMemberAdded={member => onNewMember(member)} />
+      <Form teamList={teams.map(team => team.teamName)}  onMemberAdded={member => onNewMember(member)} />
 
-      {teams.map(team => <Team key={team.teamName} teamName={team.teamName} primary={team.primaryColor} secondary={team.secondaryColor} />)}
+      {teams.map(team => <Team
+                                            key={team.teamName}
+                                            teamName={team.teamName}
+                                            primary={team.primaryColor}
+                                            secondary={team.secondaryColor}
+                                            members={members.filter(member => member.Team === team.teamName)}
+                                          />)}
 
-      {/* <Team teamName="Front End" />
-      <Team teamName="Data Science" />
-      <Team teamName="Devops" /> */}
     </div>
   );
 }
