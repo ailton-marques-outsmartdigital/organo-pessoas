@@ -2,6 +2,7 @@ import './App.css';
 import Form from './components/Form/Form';
 import Banner from './components/Banner/Banner';
 import Team from './components/Team';
+import Footer from './components/Footer';
 import { useState } from 'react';
 
 function App() {
@@ -57,7 +58,7 @@ function App() {
                                             secondary={team.secondaryColor}
                                             members={members.filter(member => member.Team === team.teamName)}
                                           />)}
-
+      <Footer />
     </div>
   );
 }

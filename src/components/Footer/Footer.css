@@ -1,0 +1,41 @@
+.footer {
+  background-color: #6278F7;
+  background-image: url('../../../public/images/fundo.png');
+  min-height: 213px;
+  max-width: 100%;
+  left: 0;
+  bottom: 0;
+}
+.facebook {
+  margin-top: 85px;
+}
+.twitter {
+  margin-inline: 30px;
+}
+.instagram {
+  margin-inline: 10px;
+}
+.logo {
+  margin-top: 64px;
+  max-width: 100%;
+  height: auto;
+}
+.label {
+  margin-top: 95px;
+}
+.img-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+  color: #fff;
+  font-size: 18px;
+  text-align: center;
+}
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+* {
+  box-sizing: border-box;
+}

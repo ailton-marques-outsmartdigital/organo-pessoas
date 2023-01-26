@@ -2,7 +2,7 @@ import './Member.css'
 
 const Member = (props) => {
   return (<div className='colaborador'>
-    <div className='cabecalho'>
+    <div className='cabecalho' style={{ backgroundColor: props.BckgroundColor }}>
       <img src={props.Image} alt={props.Name} />
     </div>
     <div className='rodape'>
